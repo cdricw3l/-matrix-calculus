@@ -1,14 +1,14 @@
 
 typedef unsigned int n_t;   /* height */
-typedef unsigned int m_t;   /* width */
+typedef unsigned int p_t;   /* width */
+typedef int M_t; /* 1D representation of matrice 2D */
 
 typedef struct s_matrice
 {
 
     n_t n;
-    m_t m;
-
-
+    p_t m;
+    M_t *matrice;
 
 } t_matrice;
 
