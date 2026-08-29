@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cebouhad <cebouhad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/07 20:47:15 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/08/29 18:08:22 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/05/05 11:01:08 by cebouhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../matrice.h"
+#include "libft.h"
 
 static size_t	index_of(char *str, char c)
 {

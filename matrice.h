@@ -6,13 +6,30 @@
 #include <unistd.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <assert.h>
+#include "libft/libft.h"
+
+enum e_type 
+{
+    BRACKET_LEFT,
+    BRACKET_RIGHT,
+    V,
+    C,
+    OTHER
+};
+
+typedef struct s_token
+{
+    char                *value;
+    int                 symbole;
+    struct s_token      *next;
+
+} t_token;
 
 
-/* utils */
+/* lst */
+void delete_token(void *token);
 
-char	**ft_split(char const *s, char c);
-size_t	ft_strlen(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strdup(const char *s);
+t_list **get_token_list(char *input);
 
 #endif
