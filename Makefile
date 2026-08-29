@@ -8,7 +8,7 @@ SRCS=	utils/ft_split.c \
 		tokeniser/tokenizer.c \
 		matrice.c
 
-SRCS_OBJS = $(SRCS:*.c=*.o)
+SRCS_OBJS = $(SRCS:.c=.o)
 
 %.o:%.c
 	$(CC) -c  $(CFLAGS) $^ -o $@
