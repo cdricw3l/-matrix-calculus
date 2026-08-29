@@ -11,9 +11,32 @@ void delete_token(void *token)
     free(t);
 }
 
+int is_v(char *input)
+{
+    int i;
+    long value;
+
+    if(input[0] == '+' || input[0] == '-')
+        i++;
+    while (input[i])
+    {
+        if (ft_isdigit(input[i]))
+            return (false);
+        i++;
+    }
+    value = strtol(input, NULL, 10);
+    if (value > INT_MAX || value < INT_MIN || errno != 0)
+        return (false);
+    return (true);
+}
+
 int get_symbole(char *input)
 {
-    (void)input;
+    if (!ft_strncmp(input, "[", ft_strlen(input)))
+        return (BRACKET_LEFT);
+    if (!ft_strncmp(input, "]", ft_strlen(input)))
+        return (BRACKET_RIGHT);
+    
     return (BRACKET_LEFT);
 }
 

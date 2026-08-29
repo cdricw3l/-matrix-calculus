@@ -6,16 +6,17 @@
 /*   By: cdric.b <cdric.b@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/30 06:46:50 by cdric.b           #+#    #+#             */
-/*   Updated: 2026/05/17 12:50:12 by cdric.b          ###   ########.fr       */
+/*   Updated: 2026/08/29 20:34:50 by cdric.b          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
+# 	include <unistd.h>
+# 	include <stdlib.h>
+# 	include <limits.h>
+#	include <sys/errno.h>
 
 typedef struct s_list
 {

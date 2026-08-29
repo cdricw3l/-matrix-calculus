@@ -4,7 +4,10 @@ NAME=	matrice_calculus
 SRCS=	tokeniser/tokenizer.c \
 		matrice.c
 
+DRAFT = draft/draft.c
+
 SRCS_OBJS = $(SRCS:.c=.o)
+DRAFT_OBJS = $(DRAFT:.c=.o)
 
 %.o:%.c
 	$(CC) -c  $(CFLAGS) $^ -o $@
@@ -28,13 +31,17 @@ lib:
 libc:
 	make -C libft clean
 
+draft: $(DRAFT_OBJS)
+	$(CC) $(CFLAGS) $(DRAFT_OBJS) -o draft/draft
+	./draft/draft
+
 libre:
 	make -C libft re
 
 clean:
-	rm -f $(SRCS_OBJS)
+	rm -f $(SRCS_OBJS) $(DRAFT_OBJS)
 
 fclean: clean libc
-	rm -f $(NAME)
+	rm -f $(NAME) draft/draft
 
 .PHONY: test

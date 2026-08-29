@@ -7,7 +7,11 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <sys/types.h>
+#include <limits.h>
+#include <stdbool.h>
 #include "libft/libft.h"
+
 
 enum e_type 
 {
