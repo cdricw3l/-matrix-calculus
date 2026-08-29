@@ -16,11 +16,12 @@ int is_v(char *input)
     int i;
     long value;
 
+    i = 0;
     if(input[0] == '+' || input[0] == '-')
         i++;
     while (input[i])
     {
-        if (ft_isdigit(input[i]))
+        if (!ft_isdigit(input[i]))
             return (false);
         i++;
     }
