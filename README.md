@@ -2,13 +2,15 @@
 
 ## parsing
 
+L'espace servant de delimiteur pour la tokenisation une matrice valide prend la forme [ V V [ C C C C ] ] ou chaque symbole doit etre suivi d'un espace (Excepté le dernier symbole).
+
 ### input EBNF gramar
 
-# Non terminal symbole
+#### Non terminal symbole
+
 * EXPRESSION := MATRICE {(PLUS | MOINS) MATRICE}
-* MATRICE := BRACKET_LEFT SPACE M SPACE N SPACE BRACKET_LEFT C {SPACE C} BRACKET_RIGHT BRACKET_RIGHT 
-* M := UNSIGNED_INT (* M > 0 *)
-* N := UNSIGNED_INT (* N > 0 *)
+* MATRICE := BRACKET_LEFT  V  V  BRACKET_LEFT C { C} BRACKET_RIGHT BRACKET_RIGHT 
+* V := UNSIGNED_INT (* M > 0 *)
 * C := FLOAT
 * UNSIGNED_INT := [ PLUS ] INT 
 * SIGNED_INT := [ PLUS | MOINS ] INT
@@ -16,13 +18,12 @@
 * INT := CHIFFRE {CHIFFRE}  (* >= INT_MIN <= INT_MAX *) 
 * DECIMAL := CHIFFRE {CHIFFRE}  (* max len 8 CHIFFRE *) 
 
-# Terminal symbole
+#### Terminal symbole
 * CHIFFRE := "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 * PLUS := "+"
 * MOINS := "-"
 * BRACKET_LEFT := [
 * BRACKET_RIGHT := ]
-* SPACE := " "
 * DOT := '.'
 * COMMA := ','
 
